@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Page
+{% endblock %}
+
+{% block content %}
+    <h1 id="postlisth1">Add new post</h1>
+    <div class="loggg">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <p>
+                <input class="updel" type="submit" value="Add">
+            </p>
+        </form>
+    </div>
+{% endblock %}

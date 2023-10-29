@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create an account
+{% endblock %}
+
+{% block content %}
+    <div class="loggg">
+        <h1 id="postlisth1">Sign up</h1>
+            <div id="loginout">
+                <form action="" method="post">
+                    {{ user_form.as_p }}
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <p id="btn">
+                        <input class="button" type="submit" value="Log in">
+                    </p>
+                </form>
+            </div>
+    </div>
+{% endblock %}

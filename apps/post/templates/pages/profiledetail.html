@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<section class="h-100 gradient-custom-2">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-9 col-xl-7">
+          <div class="card">
+            <div class="rounded-top text-white d-flex flex-row" style="background-color: #e38030; height:200px;">
+              <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                <img src="
+                {% if user.icon %}
+                    {{ user.icon.url }}
+                {% else %}
+                    {% static 'images/no_image.png' %}
+                {% endif %}"
+                  alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2" 
+                  style=" width: 150px; z-index: 1">
+
+
+                
+              </div>
+              
+              <div class="ms-3" style="margin-top: 130px;">
+                {% if user.first_name and user.last_name %}
+                    <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+                {% elif user.first_name and not user.last_name %}
+                    <h5>{{ user.first_name }}</h5>
+                {% elif user.last_name and not user.first_name %}
+                    <h5>{{ user.last_name }}</h5>
+                {% else %}
+                    <h5>User</h5>
+                {% endif %}
+                <p>{{ user.username }}</p>
+              </div>
+            </div>
+            <br>
+            <div class="p-4 text-black" style="background-color: #f8f9fa;">
+              <div class="d-flex justify-content-end text-center py-1">
+              </div>
+            </div>
+            <div class="card-body p-4 text-black">
+              <div class="mb-5">
+                <p class="lead fw-normal mb-1">About</p>
+                <div class="p-4" style="background-color: #f8f9fa;">
+                  <p class="font-italic mb-1">
+                    {{ user.about }}
+                  </p>
+                </div>
+              </div>
+              
+              <button type="button" class="btn btn-outline-secondary" data-mdb-ripple-color="dark"
+                    style="z-index: 1;">
+                    <a id="none-a" href="{% url 'post_create' %}">Add post</a>
+                </button>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+<h4 id="btn">Your posts</h4>
+<br>
+{% for post in posts %}
+  {% if post.author_id == user.id %}
+      <div class="post">
+          <a href="{% url 'post_detail' post.pk %}"><img class="postimg" src="{{ post.image.url }}" alt="post"/></a>
+          <h3>{{ post.title }}</h3>
+          <h6>{{ post.created }}</h6>
+          <p>{{ post.description|truncatechars:50 }}</p>
+      </div>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    
+}
+.img {
+    height: 70px;
+    width: 140px;
+}
+
+#mainimg {
+    margin-left: 3px;
+    position: absolute;
+
+}
+#centre {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.label {
+    position: relative;
+    background-color:white;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 400px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.postimg {
+    height: 300px;
+    width: 450px;
+}
+
+.post {
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 200px;
+    margin-left: 200px;
+}
+
+.post p {
+    text-align: left;
+}
+.post h3 {
+    text-align: left;
+}
+.post h6 {
+    margin-top: 10px;
+    text-align: left;
+}
+#postlisth1 {
+    text-align: center;
+    background-color:#e38030;
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+    color: #f8f9fa;
+    text-shadow: 0 0 5px black;
+}
+
+
+
+.button {
+  background-color: #e38030;
+  border: 1px solid #e38030;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 40px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 660px;
+  margin-bottom: 300px;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 10px 30px;
+  }
+}
+
+#none-a {
+    all: unset
+}
+
+.loggg {
+    text-align: center;
+}
+
+#btn {
+    margin-left: 670px;
+}
+
+
+#signup {
+    color: #e38030;
+}
+
+#icon {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.pd_image {
+    height: 500px;
+    width: 800px;
+    margin-left: 350px;
+}
+
+#ptitle {
+    margin-left: 350px;
+
+}
+#pdesk {
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+
+.updel {
+    background-color: #e38030;
+    border: 1px solid #e38030;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 40px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#du {
+    margin-left: 350px;
+}
+
+#add {
+    margin-top: 50px;
+ }

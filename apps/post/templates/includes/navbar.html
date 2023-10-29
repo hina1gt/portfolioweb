@@ -1,0 +1,27 @@
+{% load static %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky">
+    <a href="{% url 'home' %}"><img class='img' src="{% static 'images/logo.png' %}" alt="logo"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'profile' %}">Account <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'post' %}"> Posts <span class="sr-only">(current)</span></a>
+        </li>
+        {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}"> Logout <span class="sr-only">(current)</span></a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}"> Login <span class="sr-only">(current)</span></a>
+          </li>
+        {% endif %}
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
