@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-#^zu!=flx+6lnug$4wb%66!r@(4q)5&sqm!$u*ov(cy6rwgr-^
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -120,8 +121,15 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS' : 'drf_spectacular.openapi.AutoSchema',
 
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Portfolio Web',
+    'DESCRIPTION': '',
+    'VERSION': '0.1'
 }
 
 CORS_ALLOWED_ORIGINS = [
