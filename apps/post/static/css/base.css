@@ -14,7 +14,6 @@ body {
 #mainimg {
     margin-left: 3px;
     position: absolute;
-
 }
 
 
@@ -52,6 +51,7 @@ body {
 }
 
 .post {
+    position: relative;
     background-color: white;
     display: inline-block;
     text-align: center;
@@ -106,6 +106,7 @@ body {
   touch-action: manipulation;
   margin-left: 660px;
   margin-bottom: 300px;
+  
 }
 
 .button:hover {
@@ -191,6 +192,7 @@ body {
 @media screen and (max-width: 500px){
     #mainimg {
         width: 100%;
+        margin:auto;
     }
     .label {
         width: 300px;
@@ -211,7 +213,7 @@ body {
     }
     .post {
         margin: auto;
-        margin-left: 55px;
+        margin-left: 65px;
         margin-top: 50px;
         font-size: 8pt;
     }
@@ -239,5 +241,11 @@ body {
         margin-left: 40px;
         width: 300px;
     }
+    #du {
+        margin: auto;
+        margin-left: 35px;
+    }
+    
 }
+  
 
