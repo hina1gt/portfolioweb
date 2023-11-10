@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'image_optimizer',
     'drf_spectacular',
 ]
 
@@ -151,3 +152,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+
+TELEGRAM_BOT_TOKEN = '6458632375:AAFPrzPVsPLzWrAwoTvGBkTqp1QwAp20UPc'
+TELEGRAM_CHAT_ID = '5358718905'
+
+OPTIMIZED_IMAGE_METHOD = 'pillow'

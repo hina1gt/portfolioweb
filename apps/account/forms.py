@@ -1,5 +1,4 @@
 from django import forms
-from .models import CustomUser
 from apps.post.models import *
 
 class LoginForm(forms.Form):

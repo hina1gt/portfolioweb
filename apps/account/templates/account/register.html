@@ -5,17 +5,21 @@
 {% endblock %}
 
 {% block content %}
+    <br>
+    <br>
+    <br>
     <div class="loggg">
         <h1 id="postlisth1">Sign up</h1>
+        <br>
             <div id="loginout">
                 <form action="" method="post">
                     {{ user_form.as_p }}
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ next }}">
-                    <p id="btn">
-                        <input class="button" type="submit" value="Log in">
-                    </p>
+                    <input class="updel" type="submit" value="Sign up">
                 </form>
             </div>
     </div>
+    <br>
+
 {% endblock %}

@@ -98,3 +98,31 @@ def profile(request):
         'posts': posts
         }
     return render(request, 'pages/profile.html', context)
+
+
+@login_required(login_url='login')
+def edit(request):
+    pk = request.user.id
+    user = CustomUser.objects.get(id=pk)
+    if request.method == 'POST':
+        form = UserForm(request.POST, request.FILES)
+        if form.is_valid():
+            for field in ['first_name', 'last_name', 'icon', 'about']:
+                if field in form.cleaned_data:
+                    setattr(user, field, form.cleaned_data[field])
+
+            user.save()
+
+            return redirect(to='profile')
+    else:
+        form = UserForm(initial={
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'icon': user.icon,
+            'about': user.about,
+        })
+
+    context = {
+        'form': form
+    }
+    return render(request, 'pages/edit.html', context)

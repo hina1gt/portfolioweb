@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <h1 id="postlisth1"> All posts</h1>
+    <br>
+    <br>
     {% for post in posts %}
         <div class="post">
             <a href="{% url 'post_detail' post.pk %}"><img class="postimg" src="{{ post.image.url }}" alt="post"/></a>

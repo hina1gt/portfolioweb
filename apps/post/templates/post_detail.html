@@ -6,7 +6,7 @@
 {% endblock title %}
 
 {% block content %}
-    <h1 id="postlisth1">Post</h1>
+    <br>
     <div class="description">
         <img class="pd_image" src="{{ post.image.url }}" alt="post"/>
         <h2 id="ptitle">{{ post.title}}</h2>
@@ -18,8 +18,8 @@
     </div>
     {% if post.author_id == user.id %}
         <p id="du">
-            <button class="updel" type="button"><a id="none-a" href="{{ product.get_absolute_url}}update">Update</a></button>
-            <button class="updel" type="button"><a id="none-a" href="{{ product.get_absolute_url}}delete">Delete</a></button>
+            <button class="updel" type="button"><a id="none-a" href="{{ post.get_absolute_url}}update">Update</a></button>
+            <button class="updel" type="button"><a id="none-a" href="{{ post.get_absolute_url}}delete">Delete</a></button>
         </p>
     {% endif %}
 {% endblock %}

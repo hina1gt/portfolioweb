@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
+    
 }
 .img {
     height: 70px;
@@ -52,7 +52,7 @@ body {
 
 .post {
     position: relative;
-    background-color: white;
+    background-color: #f8f9fa;
     display: inline-block;
     text-align: center;
     margin-bottom: 200px;
@@ -71,13 +71,10 @@ body {
 }
 #postlisth1 {
     text-align: center;
-    background-color:#e38030;
-    margin-bottom: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
     font-weight: 900;
-    color: #f8f9fa;
-    text-shadow: 0 0 5px black;
+    color:#e38030;
 }
 
 #cen {
@@ -105,7 +102,6 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-left: 660px;
-  margin-bottom: 300px;
   
 }
 
@@ -195,17 +191,17 @@ body {
         margin:auto;
     }
     .label {
-        width: 300px;
-        height: 100px;
+        width: 350px;
+        height: 150px;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 60px;
 
     }
     .label h2 {
-        font-size: 6pt;
+        font-size: 8pt;
     }
     .label p {
-        font-size: 4pt;
+        font-size: 5pt;
     }
     .postimg {
         width: 300px;

@@ -3,7 +3,6 @@ from django.contrib.auth import login, authenticate
 from .forms import LoginForm, UserRegistrationForm
 from django.http import HttpResponse
 
-
 def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
