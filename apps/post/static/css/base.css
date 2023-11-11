@@ -243,5 +243,6 @@ body {
     }
     
 }
-  
-
+.svgs {
+    text-decoration: none !important;
+}

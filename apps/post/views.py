@@ -126,3 +126,12 @@ def edit(request):
         'form': form
     }
     return render(request, 'pages/edit.html', context)
+
+def features(request):
+    return render(request, 'pages/features.html')
+
+def fqa(request):
+    return render(request, 'pages/fqa.html')
+
+def about(request):
+    return render(request, 'pages/about.html')

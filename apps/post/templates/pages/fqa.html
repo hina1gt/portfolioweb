@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Portfolio Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+    h2 {
+      color: #333;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .question {
+      font-weight: bold;
+      color: #e38030;
+    }
+  </style>
+</head>
+<body>
+    <div class="bar">        
+        {% include 'includes/navbar.html' %} 
+    </div>
+    <br>
+    <div class="container">
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+    <br>
+    <section class="faq-item">
+        <h2 class="question">Q: What is the purpose of this portfolio website?</h2>
+        <p>A: This portfolio website serves as a platform for users to showcase their professional work and share insights through blog posts.</p>
+    </section>
+    <br>
+    <section class="faq-item">
+        <h2 class="question">Q: How can I create a blog post on my portfolio?</h2>
+        <p>A: To create a blog post, at first sign up or login. Then navigate to profile page simply by clicking 'Account' text on navbar. Lastly, click on button 'Add post' and create a post.</p>
+    </section>
+    <br>
+    <section class="faq-item">
+        <h2 class="question">Q: Can I add another account?</h2>
+        <p>A: 
+            Yes, and you can easily switch between them just by logging and loggingout.</p>
+    </section>
+    </div>
+    <br><br>
+    {% include 'includes/footer.html' %} 
+</body>
+</html>
